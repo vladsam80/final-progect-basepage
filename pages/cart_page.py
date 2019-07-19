@@ -1,5 +1,5 @@
-from base_page import BasePage
-from locators import CartPageLocators
+from .base_page import BasePage
+from .locators import CartPageLocators
 
 class CartPage(BasePage):
     def should_see_message_no_products_in_the_cart(self):
