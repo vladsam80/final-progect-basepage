@@ -14,3 +14,11 @@ class ProductPage(BasePage):
 
     def should_be_success_of_addition_message(self):
         assert self.get_addition_message() == self.get_product_name(), "Error. Item does not match."
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message is presented, but should not be"
+
+    def should_be_dissapeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message is presented, but should has dissapeared"
