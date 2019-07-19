@@ -1,7 +1,6 @@
-#pytest -s -v --tb=line --language=en test_main_page.py
-from .pages.main_page import MainPage
-from .pages.login_page import LoginPage
-from .pages.cart_page import CartPage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
+from pages.cart_page import CartPage
 import pytest
 
 LINK = "http://selenium1py.pythonanywhere.com"
