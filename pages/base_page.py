@@ -15,6 +15,7 @@ class BasePage(object):
     def open(self): 
         self.browser.get(self.url)
 
+    #тест упадет, если не увидит искомый элемент
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
@@ -38,6 +39,9 @@ class BasePage(object):
         except TimeoutException:
             return False
         return True
+
+    def go_to_cart_page(self):
+        self.browser.find_element(*BasePageLocators.CART_LINK).click()
 
     def go_to_login_page(self):
         self.browser.find_element(*BasePageLocators.LOGIN_LINK).click()
